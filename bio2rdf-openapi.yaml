@@ -1,0 +1,85 @@
+openapi: 3.0.0
+info:
+  title: Bio2RDF
+  description: Bio2RDF is an open source project to generate and provide linked data for the life sciences.
+  termsOfService: https://github.com/bio2rdf/bio2rdf-scripts/wiki/Terms-of-use
+  license:
+    name: MIT License
+    url: https://github.com/bio2rdf/bio2rdf-scripts/blob/master/MIT-LICENSE.txt\
+  contact: 
+    name: Michel Dumontier
+    email: michel.dumontier@gmail.com
+    x-role: responsible-developer
+    x-id: https://orcid.org/0000-0003-4727-9435
+  version: 1.0.0  
+  x-implementationLanguage: PHP
+  x-accessRestriction: none
+x-externalResources:
+  - x-url: http://bio2rdf.org
+    x-description: Main website
+  - x-url: https://github.com/bio2rdf/bio2rdf-scripts/wiki
+    x-description: github repository
+servers:
+  - url: http://bio2rdf.org
+    description: Bio2RDF Production server
+    x-location: Maastricht, Netherlands
+    x-maturity: production
+  - url: https://bio2rdf.org
+    description: Bio2RDF Production server
+    x-location: Maastricht, Netherlands
+    x-maturity: production
+  - url: https://openlifedata.org
+paths:
+  /{prefix}:{identifier}:
+    parameters:
+      - name: prefix
+        in: path
+        description: a valid prefix (see http://prefixcommons.org)
+        schema:
+          type: string
+        required: true
+      - name: identifier
+        in: path
+        description: a valid identifier for the resource
+        schema:
+          type: string
+        required: true
+    get:
+      operationId: getItem
+      description: Retrieve entity by prefixed identifier
+      responses:
+        '200':
+          description: a representation of the entity
+          content:
+            '': {}
+            'text/plain': {}
+            'text/turtle': {}
+            'text/csv': {}
+            'text/tab-separated-values': {}
+            'application/ld+json': {}
+            'application/rdf+json': {}
+            'application/rdf+xml': {}
+            'application/sparql-results+json': {}
+            'application/sparql-results+xm': {}
+
+  /sparql:
+    parameters:
+      - name: performQuery
+        in: query
+        description: A valid SPARQL query
+        schema:
+          type: string
+        required: true
+
+    get:
+      operationId: query
+      description: Perform a SPARQL query.
+      responses:
+        '200':
+          description: SPARQL query result
+          content:
+            '': {}
+            'application/sparql-results+xml': {}
+            'application/sparql-results+json': {}
+        
+
