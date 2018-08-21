@@ -74,7 +74,7 @@ paths:
         required: true
       - name: maxrows
         in: query
-        description: Limits the number of results returned by the endpoint. Use OFFSET and LIMIT in your qyery to paginate through results.</br>(Minimum: 1, Maximum 10,000)
+        description: Limits the number of results returned by the endpoint. Use OFFSET and LIMIT in your qyery to paginate through results.</br>(Minimum 1, Maximum 10,000)
         required: true
         schema:
           type: integer
