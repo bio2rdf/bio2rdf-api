@@ -5,7 +5,7 @@ info:
   termsOfService: https://github.com/bio2rdf/bio2rdf-scripts/wiki/Terms-of-use
   license:
     name: MIT License
-    url: https://github.com/bio2rdf/bio2rdf-scripts/blob/master/MIT-LICENSE.txt\
+    url: https://github.com/bio2rdf/bio2rdf-scripts/blob/master/MIT-LICENSE.txt
   contact: 
     name: Michel Dumontier
     email: michel.dumontier@gmail.com
