@@ -17,8 +17,10 @@ info:
 x-externalResources:
   - x-url: http://bio2rdf.org
     x-description: Main website
+    x-type: website
   - x-url: https://github.com/bio2rdf/bio2rdf-scripts/wiki
     x-description: github repository
+    x-type: api documentation
 servers:
   - url: http://bio2rdf.org
     description: Bio2RDF Production server
