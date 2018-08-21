@@ -48,7 +48,7 @@ paths:
         required: true
     get:
       operationId: getItem
-      description: Retrieve entity by prefixed identifier
+      summary: Retrieve entity by prefixed identifier
       responses:
         '200':
           description: a representation of the entity
@@ -75,7 +75,7 @@ paths:
 
     get:
       operationId: query
-      description: Perform a SPARQL query.
+      summary: Perform a SPARQL query.
       responses:
         '200':
           description: SPARQL query result
