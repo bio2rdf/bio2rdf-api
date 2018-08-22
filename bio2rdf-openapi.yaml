@@ -62,7 +62,7 @@ paths:
             'application/rdf+json': {}
             'application/rdf+xml': {}
             'application/sparql-results+json': {}
-            'application/sparql-results+xm': {}
+            'application/sparql-results+xml': {}
 
   /sparql:
     parameters:
