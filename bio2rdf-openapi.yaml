@@ -56,7 +56,6 @@ paths:
         '200':
           description: a representation of the entity
           content:
-            '': {}
             'text/plain': {}
             'text/turtle': {}
             'text/csv': {}
@@ -91,7 +90,6 @@ paths:
         '200':
           description: SPARQL query result
           content:
-            '': {}
             'application/sparql-results+xml': {}
             'application/sparql-results+json': {}
     post:
@@ -101,7 +99,6 @@ paths:
         '200':
           description: SPARQL query result
           content:
-            '': {}
             'application/sparql-results+xml': {}
             'application/sparql-results+json': {}             
 
